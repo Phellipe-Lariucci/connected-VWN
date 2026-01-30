@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Logo from "../../assets/imagens/logoCoracao.png";
 import s from "./header.module.scss";
 
 export default function Header() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <>
       <header className={s.header}>
@@ -23,9 +26,15 @@ export default function Header() {
           src="https://avatars.githubusercontent.com/u/226540720?v=4"
           alt="imagem de perfil"
           className={s.imgPerfil}
+          onClick={() => setMenuAberto(!menuAberto)}
         />
       </header>
-      <Link to="/usuario">Phellipe</Link>
+      <nav className={menuAberto ? s.navUser : s.closedNav}>
+        <Link to="/usuario">Phellipe</Link>
+        <Link>Meus Voluntariado</Link>
+        <Link>Configurações de conta</Link>
+        <Link>Sair</Link>
+      </nav>
     </>
   );
 }
