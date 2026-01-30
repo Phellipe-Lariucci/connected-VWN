@@ -1,0 +1,15 @@
+@use "../../globalStyle.scss" as *;
+
+.footer {
+  background-color: #e9eff4;
+  min-height: 70px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
