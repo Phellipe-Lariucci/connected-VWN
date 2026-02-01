@@ -1,9 +1,9 @@
 @use "../../globalStyle.scss" as *;
 
 .footer {
-  background-color: #e9eff4;
+  background-color: var(--corFooter);
   min-height: 70px;
-  height: 10px;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
