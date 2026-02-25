@@ -9,15 +9,16 @@
   align-items: center;
   .info {
     padding: 0px 5vw;
+    min-width: 600px;
     h1 {
       font-family: "Source Sans 3", sans-serif;
-      font-size: 6.5vw;
+      font-size: clamp(4rem, 5.5vw, 7rem);
       font-weight: 700;
       color: var(--corPrincipal);
     }
     h2 {
       font-family: helvetica, sans-serif;
-      font-size: 1.8vw;
+      font-size: 1.7vw;
       font-weight: 400;
       color: var(--corPrincipal);
     }
@@ -54,5 +55,7 @@
   }
   .imgHome {
     padding-right: 2vw;
+    width: 50vw;
+    min-width: 729px;
   }
 }

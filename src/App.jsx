@@ -5,7 +5,7 @@ import Doacao from "./pages/doacao/Doacao";
 import Eventos from "./pages/eventos/Eventos";
 import Voluntariado from "./pages/voluntariado/Voluntariado";
 import Mentoria from "./pages/mentoria/Mentoria";
-import Usuario from "./pages/usuario/usuario";
+import Usuario from "./pages/usuario/Usuario";
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer/Footer";
 
