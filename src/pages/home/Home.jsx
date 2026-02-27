@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./home.module.scss";
+import imgHome from "../../assets/imagens/imgHome.png";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
             </section>
           </section>
           <img
-            src="src\assets\imagens\imgHome.png"
+            src={imgHome}
             alt="Mãos segurando um globo com as pessoas dando a mao em volta"
             className={s.imgHome}
           />
