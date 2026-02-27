@@ -1,10 +1,58 @@
 @use "../../globalStyle.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
-img {
-  border-radius: 10px;
-}
-h2 {
-  font-family: "Source Sans 3", sans-serif;
-  color: var(--corPrincipal);
+.container {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .mascara {
+    border-radius: 10px;
+    max-width: 350px;
+    max-height: 160px;
+    overflow: hidden;
+    .img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .description {
+    white-space: pre-wrap;
+  }
+  h2 {
+    font-family: var(--fontHeader);
+    color: var(--corPrincipal);
+    text-align: center;
+    padding: 10px;
+  }
+  p {
+    font-family: helvetica;
+    font-size: 1em;
+    color: var(--corPrincipal);
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--corPrincipal);
+    font-family: var(--fontHeader);
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    margin: 10px;
+    height: 50px;
+    width: 210px;
+    transition: transform 0.3s ease;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
 }

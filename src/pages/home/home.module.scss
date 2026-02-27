@@ -1,61 +1,101 @@
 @use "../../globalStyle.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
-.main {
-  height: 80vh;
-  width: 100vw;
+.conteudo {
+  height: 81vh;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  .info {
-    padding: 0px 5vw;
-    min-width: 600px;
-    h1 {
+}
+.info {
+  padding: 0px 5vw;
+  min-width: 600px;
+  align-self: center;
+  h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: clamp(4rem, 5.5vw, 7rem);
+    font-weight: 700;
+    color: var(--corPrincipal);
+  }
+  h2 {
+    font-family: helvetica, sans-serif;
+    font-size: 1.7vw;
+    font-weight: 400;
+    color: var(--corPrincipal);
+  }
+  .cadastrar {
+    background-color: var(--corBotaoDestaque);
+    color: white;
+    margin: 5vh 0px 2vh 0px;
+    height: 64px;
+    width: 332px;
+    font-size: 120%;
+    font-weight: 600;
+    font-family: "Source Sans 3", sans-serif;
+    transition:
+      transform 0.1s ease,
+      box-shadow 0.1s ease;
+    &:active {
+      transform: scale(0.95);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .dados {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+  }
+  .indicador {
+    p:first-child {
       font-family: "Source Sans 3", sans-serif;
-      font-size: clamp(4rem, 5.5vw, 7rem);
+      font-size: 50px;
       font-weight: 700;
       color: var(--corPrincipal);
     }
-    h2 {
+    p {
       font-family: helvetica, sans-serif;
-      font-size: 1.7vw;
-      font-weight: 400;
+      font-size: 16px;
       color: var(--corPrincipal);
+      font-weight: 400;
     }
-    .cadastrar {
-      background-color: var(--corBotaoDestaque);
-      color: white;
-      margin: 5vh 0px 2vh 0px;
-      height: 64px;
-      width: 332px;
-      font-size: 120%;
-      font-weight: 600;
-      font-family: "Source Sans 3", sans-serif;
+  }
+}
+.imgHome {
+  padding-right: 2vw;
+  width: 50vw;
+  max-width: 650px;
+  align-self: flex-start;
+}
+@media screen and (max-width: 1200px) {
+  .conteudo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      text-align: center;
     }
-
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
     .dados {
-      display: flex;
-      padding-top: 10px;
-      justify-content: space-between;
-    }
-    .indicador {
-      p:first-child {
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 50px;
-        font-weight: 700;
-        color: var(--corPrincipal);
-      }
-      p {
-        font-family: helvetica, sans-serif;
-        font-size: 16px;
-        color: var(--corPrincipal);
-        font-weight: 400;
-      }
+      gap: 25px;
     }
   }
   .imgHome {
-    padding-right: 2vw;
+    padding: 50px 0px;
+    border-radius: 40%;
     width: 50vw;
-    min-width: 729px;
+    max-width: 650px;
+    margin: auto;
   }
 }

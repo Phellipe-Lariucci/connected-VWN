@@ -8,22 +8,28 @@ import Mentoria from "./pages/mentoria/Mentoria";
 import Usuario from "./pages/usuario/Usuario";
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer/Footer";
+import "./globalStyle.scss";
 
 export default function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      {/* container flex para header + main + footer */}
+      <div className="ajustePaginas">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/doacao" element={<Doacao />} />
-          <Route path="/voluntariado" element={<Voluntariado />} />
-          <Route path="/mentoria" element={<Mentoria />} />
-          <Route path="/eventos" element={<Eventos />} />
-          <Route path="/usuario" element={<Usuario />} />
-        </Routes>
+
+        <main className="ajusteMain">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/doacao" element={<Doacao />} />
+            <Route path="/voluntariado" element={<Voluntariado />} />
+            <Route path="/mentoria" element={<Mentoria />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path="/usuario" element={<Usuario />} />
+          </Routes>
+        </main>
+
         <Footer />
-      </BrowserRouter>
-    </>
+      </div>
+    </BrowserRouter>
   );
 }

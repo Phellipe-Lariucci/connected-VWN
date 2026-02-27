@@ -2,8 +2,9 @@
 
 .footer {
   background-color: var(--corFooter);
+  height: 10vw;
   min-height: 70px;
-  height: 10vh;
+  max-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
